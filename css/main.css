@@ -1,0 +1,951 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+  border: 0; }
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol,
+ul {
+  list-style: none; }
+
+blockquote,
+q {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: "";
+  content: none; }
+
+q:before, q:after {
+  content: "";
+  content: none; }
+
+table {
+  border-spacing: 0;
+  border-collapse: collapse; }
+
+* {
+  box-sizing: border-box; }
+
+body {
+  min-height: 2500px;
+  font-family: "Lato"; }
+
+.container {
+  width: 1050px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto; }
+
+p {
+  color: #656565; }
+
+.hamburger-icon {
+  top: 0;
+  display: none;
+  float: right;
+  padding: 10px 40px;
+  font-size: 40px;
+  transform: scale(0.6);
+  color: white; }
+
+.hamburger-inner {
+  background: white !important; }
+  .hamburger-inner:after, .hamburger-inner:before {
+    background: white !important; }
+
+.hamburger-inner,
+.hamburger-inner:after,
+.hamburger-inner:before {
+  height: 4px !important; }
+
+.boxy {
+  float: left; }
+
+.js-show-menu {
+  transform: translateX(-100%) !important; }
+
+.js-hamburger-icon.left {
+  left: 0;
+  transition: left .5s;
+  color: white; }
+
+.opacity-0 {
+  opacity: 0 !important; }
+
+.overflow-hidden {
+  overflow: hidden; }
+
+header {
+  position: relative;
+  height: 100vh;
+  max-height: 500px;
+  min-height: 500px;
+  background-image: url("../images/mountains.jpeg");
+  background-position: center;
+  background-size: cover; }
+
+header .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(4, 14, 22, 0.75); }
+
+.header__content {
+  position: absolute;
+  top: 30%;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  font-size: 60px;
+  text-align: center; }
+
+.overlay.js-zindex-4 {
+  z-index: 4; }
+
+.js-nav-default {
+  transition: all .1s;
+  background: rgba(0, 0, 0, 0) !important; }
+
+.js-nav-blue {
+  transition: all .1s;
+  background: #2865c7 !important; }
+  .js-nav-blue .logo-square {
+    color: white;
+    border-color: white; }
+  .js-nav-blue a:after {
+    border-color: white !important; }
+
+nav.main {
+  position: fixed;
+  z-index: 3;
+  width: 100%;
+  padding: 0 30px;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  background: #223f40; }
+  nav.main > .container > ul {
+    float: right; }
+  nav.main > .container > ul > li {
+    float: left;
+    padding: 20px 15px; }
+    nav.main > .container > ul > li > a {
+      position: relative;
+      display: inline-block;
+      font-size: 10.5px;
+      text-align: center;
+      text-decoration: none;
+      letter-spacing: 1.8px;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.8); }
+      nav.main > .container > ul > li > a:hover {
+        color: white; }
+
+.social__list-item {
+  display: none; }
+
+.logo-square {
+  float: left;
+  padding: 5px;
+  margin: 13px 0;
+  font-size: 13px;
+  line-height: 14px;
+  transition: all .5s;
+  transform: scale(1.1);
+  color: #afb3b4;
+  border: 2px solid #cecece;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.4); }
+  .logo-square:hover {
+    cursor: pointer;
+    opacity: 1;
+    color: white;
+    border-color: white; }
+
+.logo {
+  font-size: 75px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: white;
+  text-shadow: 1px 1px 5px black;
+  vmax: 1vw; }
+  .logo .lastname {
+    position: relative; }
+  .logo .lastname:after {
+    position: absolute;
+    bottom: 20px;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+    content: "";
+    transform: skewX(20deg);
+    background: #42a1f4; }
+
+section {
+  font-size: 20px; }
+
+h1 {
+  font-family: "Lato";
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 1px;
+  color: #656565; }
+  h1:after {
+    display: block;
+    width: 100%;
+    margin: 28px 0 40px;
+    content: "";
+    border-bottom: 2px dashed #e2e2e2; }
+
+h2 {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  font-size: 24px;
+  letter-spacing: 7px;
+  text-transform: uppercase;
+  color: white; }
+
+.btn--resume {
+  padding: 10px 40px;
+  font-family: "Lato";
+  font-size: 11px;
+  transition: all .5s;
+  text-decoration: none;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: white;
+  border: none;
+  background: #42a1f4; }
+  .btn--resume:hover {
+    background: #f45e99; }
+
+#personal .social__list {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 20px; }
+  #personal .social__list .social-icon {
+    display: inline-block;
+    margin-left: 20px; }
+    #personal .social__list .social-icon a {
+      color: #565656; }
+
+.personal__skills {
+  clear: both; }
+
+.personal,
+.portfolio,
+.contact {
+  padding: 100px 0;
+  overflow: hidden; }
+
+.personal__description {
+  float: left;
+  width: 70%;
+  padding-right: 50px;
+  font-family: "Lato";
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 2.2;
+  text-align: left;
+  color: #383838; }
+
+.personal__image {
+  width: 26%;
+  border-radius: 5px; }
+
+.personal__skills-title {
+  display: block;
+  float: left;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  clear: both;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: .7px;
+  text-transform: uppercase;
+  color: #b9b9b9; }
+
+.personal__skills-list {
+  float: left; }
+
+.personal__skills-list-item {
+  display: inline-block;
+  padding: 15px 30px;
+  font-family: "Lato";
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  color: white; }
+
+.personal__frontend-skills {
+  background: #343a37; }
+
+.personal__backend-skills {
+  background: #2865c7; }
+
+.personal__platform-skills {
+  background: #42a1f4; }
+
+.portfolio {
+  min-height: 800px;
+  clear: both;
+  background: #f1f1f1; }
+
+.portfolio h1 {
+  color: #7d7d7d; }
+  .portfolio h1:after {
+    border-color: #dcdcdc; }
+
+.portfolio__pieces {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; }
+
+.portfolio__piece {
+  position: relative;
+  float: left;
+  width: 49%;
+  max-height: 600px;
+  min-height: 400px;
+  margin: 2.5% 2.5% 2.5% 0;
+  cursor: pointer;
+  border: 5px solid #f1f1f1;
+  border-radius: 5px;
+  background: #2f2f2f;
+  box-shadow: 0 0 7px #bdbdbd; }
+
+.portfolio__piece:nth-child(even) {
+  margin: 1% 0 1% 1%; }
+
+.portfolio__piece:nth-child(odd) {
+  margin: 1% 1% 1% 0; }
+
+.portfolio__piece .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: flex;
+  height: 100%;
+  padding: 50px 50px;
+  overflow: hidden;
+  opacity: 0;
+  background: #182021;
+  align-items: center;
+  justify-content: center; }
+
+.portfolio__piece .overlay .portfolio__piece-title {
+  padding: 0;
+  margin-bottom: 20px;
+  line-height: 1.8;
+  text-align: left; }
+
+.portfolio__piece-content {
+  transition: opacity .5s;
+  opacity: 0; }
+
+.portfolio__piece-description {
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 2;
+  color: white; }
+
+.portfolio__piece:hover .overlay {
+  opacity: 1; }
+  .portfolio__piece:hover .overlay .portfolio__piece-content {
+    opacity: 1; }
+
+.portfolio__piece-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  object-position: top; }
+
+.portfolio__piece-tools {
+  margin-top: 30px; }
+
+.portfolio__piece-tool {
+  display: inline-block;
+  padding: 10px 15px;
+  margin: 10px 5px 0 0;
+  font-family: "Lato";
+  font-size: 13px;
+  letter-spacing: 1.3px;
+  color: #f0f0f0;
+  border-radius: 30px;
+  background-color: #2864c7; }
+
+.overlay.portfolio__piece-title {
+  font-size: 16px; }
+
+.portfolio__piece-title {
+  padding: 60px 10px;
+  font-size: 17px;
+  line-height: 2;
+  text-align: center;
+  letter-spacing: 1px;
+  color: white; }
+
+.portfolio__piece-title {
+  font-size: 15px; }
+
+.portfolio__piece-hand {
+  width: 100%; }
+
+.form-group {
+  display: block;
+  margin: 10px 0; }
+
+.label {
+  font-weight: 700; }
+
+.label,
+.btn {
+  font-size: 16px;
+  letter-spacing: .5px;
+  color: #f1f1f1; }
+
+.input {
+  display: inline-block;
+  width: 100%;
+  padding: 8px;
+  padding: 9px;
+  margin: 20px 0;
+  font-family: "Lato";
+  font-size: 17px;
+  font-weight: 300;
+  resize: none;
+  letter-spacing: .8px;
+  color: #2f2f2f;
+  border: none;
+  border-bottom: 6px solid #2864c5;
+  border-radius: 2px;
+  outline: none;
+  background-color: #f1f1f1; }
+
+.input:focus,
+.input:active {
+  border: none;
+  border-bottom: 6px solid #5d8fde;
+  -webkit-appearance: none; }
+
+.contact-form {
+  position: relative;
+  z-index: 1; }
+
+.col-4 {
+  float: left;
+  width: 32.3333%;
+  margin-right: 1%; }
+
+.col-8 {
+  float: left;
+  width: 66.66666667%; }
+
+.btn {
+  display: inline-block;
+  width: 100%;
+  padding: 14px 40px;
+  transition: background .5s;
+  color: white;
+  border: 1px solid #2865c7;
+  border-radius: 2px;
+  background-color: #2865c7; }
+  .btn:hover {
+    cursor: pointer;
+    background: #3173dc; }
+  .btn:focus {
+    outline: none; }
+
+.clear {
+  clear: both; }
+
+.contact {
+  position: relative; }
+
+.contact .email-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  display: none;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  background: rgba(0, 0, 0, 0.75);
+  align-items: center;
+  justify-content: center; }
+
+.email-response-dialog {
+  position: relative;
+  z-index: 5;
+  width: 70%;
+  max-width: 600px;
+  font-size: 15px;
+  opacity: 0; }
+  .email-response-dialog .icon--email {
+    margin: 0 0 20px 0;
+    font-size: 45px;
+    opacity: .1; }
+  .email-response-dialog .icon--close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 25px;
+    height: 25px;
+    margin: 20px;
+    font-size: 15px;
+    line-height: 25px;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 50%;
+    background: #1c51a5; }
+
+.email-response-dialog__button {
+  padding: 10px 50px;
+  margin: 40px 0 0 0;
+  cursor: pointer;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  background: #3173dc; }
+
+.email-response-dialog__header,
+.email-response-dialog__body {
+  padding: 25px; }
+
+.email-response-dialog__body {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  text-align: center;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  background-color: white; }
+
+.email-response-dialog__header {
+  color: white;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  background: orange;
+  background: #2865c7; }
+
+.show-email-overlay {
+  display: flex !important; }
+
+.map {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  opacity: .0346;
+  background: url(https://upload.wikimedia.org/wikipedia/commons/e/ec/World_map_blank_without_borders.svg);
+  background-size: contain; }
+
+.relative {
+  position: relative; }
+
+.contact h1 {
+  color: #f1f1f1f1; }
+  .contact h1:after {
+    border-bottom: 2px dashed #4c4c4c; }
+
+.contact .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #2f2f2f; }
+
+.spinner {
+  position: absolute;
+  top: calc(50%-80px);
+  width: 80px;
+  height: 80px; }
+
+.double-bounce1,
+.double-bounce2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+  animation: sk-bounce 2.0s infinite ease-in-out;
+  opacity: .4;
+  border-radius: 50%;
+  background-color: white; }
+
+.double-bounce2 {
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s; }
+
+@-webkit-keyframes sk-bounce {
+  0%,
+  100% {
+    -webkit-transform: scale(0); }
+  50% {
+    -webkit-transform: scale(1); } }
+
+@keyframes sk-bounce {
+  0%,
+  100% {
+    -webkit-transform: scale(0);
+    transform: scale(0); }
+  50% {
+    -webkit-transform: scale(1);
+    transform: scale(1); } }
+
+@keyframes scroll {
+  0% {
+    opacity: 1; }
+  100% {
+    transform: translateY(34px);
+    opacity: 0; } }
+
+@media only screen and (max-width: 1150px) {
+  .container {
+    width: 100%;
+    padding: 0 50px;
+    margin: 0 0; }
+  .personal,
+  .portfolio,
+  .contact {
+    padding: 80px 0; }
+  #personal:before {
+    display: none; }
+  .personal__description {
+    font-size: 1.7vw; } }
+
+@media all and (max-width: 960px) {
+  .personal__description {
+    font-size: 16px; }
+  .portfolio__piece .overlay {
+    overflow: auto; }
+  .portfolio__piece {
+    width: 100%; } }
+
+@media all and (max-width: 800px) {
+  .personal {
+    text-align: center; }
+    .personal h1 {
+      text-align: left; }
+  .personal__description {
+    width: 100%;
+    padding: 0;
+    font-size: 14px;
+    line-height: 2.4; }
+  .personal__image {
+    display: inline-block;
+    width: 50%;
+    max-width: 250px;
+    margin: 40px; }
+  .personal__skills {
+    margin: 10px;
+    overflow: hidden;
+    text-align: center; }
+  .personal__skills-list-item {
+    font-size: 13px;
+    border-radius: 30px; }
+  .personal__frontend-skills {
+    background: white; }
+    .personal__frontend-skills .personal__skills-list-item {
+      background: #114190; }
+  .personal__backend-skills {
+    background: white; }
+    .personal__backend-skills .personal__skills-list-item {
+      background: #2865c7; }
+  .personal__platform-skills {
+    background: white; }
+    .personal__platform-skills .personal__skills-list-item {
+      background: #9d1098; }
+  .personal__skills-list {
+    display: inline-block;
+    float: initial;
+    margin: 0 0; }
+  .personal__skills-list-item {
+    padding: 10px 30px;
+    margin: 5px; }
+  .personal__skills-title {
+    float: initial;
+    margin-top: 0;
+    font-size: 14px; } }
+
+@media all and (max-width: 680px) {
+  .logo {
+    font-size: 11vw; }
+    .logo .lastname:after {
+      width: 3vw;
+      height: 3vw; }
+  .hamburger-icon {
+    position: absolute;
+    left: calc(100% - 100px);
+    font-size: 22px;
+    transition: left .5s;
+    outline: none; }
+  h1 {
+    font-size: 6.7vw; }
+  .portfolio__piece {
+    width: 100%; } }
+
+@media only screen and (max-width: 600px) {
+  header {
+    max-height: 500px; }
+  #personal .social__list {
+    display: none; }
+  .social__list-item {
+    display: block; }
+  .personal,
+  .portfolio,
+  .contact {
+    padding: 40px 0; }
+  .container {
+    width: 100%;
+    padding: 0 20px;
+    margin: 0 0; }
+  .portfolio__piece {
+    width: 100%;
+    border: 1px solid black;
+    border-color: #bdbdbd;
+    background: white;
+    box-shadow: 0 0 7px #c3c3c3; }
+    .portfolio__piece > .portfolio__piece-title {
+      display: none; }
+    .portfolio__piece .portfolio__piece-description {
+      font-size: 13px;
+      line-height: 1.8;
+      color: black; }
+    .portfolio__piece .portfolio__piece-title {
+      font-size: 13px;
+      font-weight: 400;
+      color: black; }
+    .portfolio__piece .overlay {
+      position: relative;
+      height: auto;
+      padding: 20px;
+      background: white; }
+    .portfolio__piece .portfolio__piece-tool {
+      font-size: 10px; }
+  .portfolio__piece .overlay {
+    opacity: 1; }
+  .portfolio__piece-content {
+    margin-top: 0;
+    opacity: 1; }
+  .portfolio__piece-image {
+    position: relative;
+    z-index: 5; }
+  .portfolio__piece:nth-child(odd),
+  .portfolio__piece:nth-child(even) {
+    margin: 0;
+    margin-bottom: 20px; }
+  header {
+    max-height: initial;
+    min-height: initial; }
+  h2 {
+    margin-top: 10vw;
+    font-size: 4.2vw;
+    letter-spacing: 5px; }
+  .boxy {
+    width: 100%;
+    padding: 10px 5px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
+    .boxy .logo-square {
+      padding: 5px;
+      margin: 0;
+      font-size: 13px;
+      opacity: 1; }
+  .boxy-blue {
+    width: 100%;
+    transition: all .5s;
+    background: #245ab2 !important; }
+    .boxy-blue .hamburger-icon {
+      color: white; }
+    .boxy-blue .logo-square {
+      opacity: .8;
+      color: white;
+      border-color: white; }
+  .js-home-link {
+    display: none !important; }
+  .height-100 {
+    height: 100%; }
+  nav.main {
+    position: relative;
+    z-index: 50;
+    width: 100%;
+    padding: 0;
+    text-align: center;
+    border: none;
+    background: 0; }
+    nav.main > .container > ul {
+      position: fixed;
+      top: 0;
+      left: 100%;
+      z-index: 200;
+      width: 75%;
+      height: 100%;
+      transition: all .5s;
+      transform: translateX(100%);
+      border: none;
+      background: white; }
+    nav.main > .container > ul > li {
+      width: 100%;
+      padding: 0;
+      margin: 0;
+      transform: none;
+      border-bottom: 1px solid #e6e5e5; }
+      nav.main > .container > ul > li a:hover {
+        color: #42a1f4; }
+      nav.main > .container > ul > li > a {
+        width: 100%;
+        padding: 25px;
+        font-size: 11px;
+        letter-spacing: 2px;
+        color: black; }
+        nav.main > .container > ul > li > a:after {
+          display: none; }
+  .social__list {
+    width: 100%;
+    overflow: hidden; }
+    .social__list li {
+      float: left;
+      width: 50%;
+      border-top: 1px solid #e6e5e5;
+      border-right: 1px solid #e6e5e5; }
+      .social__list li a {
+        display: inline-block;
+        padding: 20px;
+        font-size: 16px;
+        color: black; }
+    .social__list li:first-child,
+    .social__list li:nth-child(2) {
+      border-top: none; }
+  .label,
+  .btn,
+  .input {
+    font-size: 14px; }
+  .hamburger-icon {
+    display: block; }
+  .social__link {
+    width: 50px;
+    height: 50px;
+    font-size: 19px;
+    line-height: 50px; }
+  .social__link--text {
+    font-size: 17px; }
+  .portfolio__piece {
+    height: auto;
+    max-height: 100%; }
+  .scroll {
+    bottom: 15%;
+    left: calc(50% - 18px); } }
